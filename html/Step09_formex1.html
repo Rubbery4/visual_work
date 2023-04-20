@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_formex1.html</title>
+    <style>
+        #field {
+            width: 150px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>form test2</h1>
+    <form action="Step09_formex.html">
+        <label for="id">아이디</label>
+        <input type="text" id="id">
+        <label for="pwd">비밀번호</label>
+        <input type="password" id="pwd">
+        <legend>
+            <label>
+                <input type="checkbox">치킨
+            </label>
+            <label>
+                <input type="checkbox">피자
+            </label>
+            <label>
+                <input type="checkbox">족발
+            </label>
+        </legend>
+        <fieldset id="field">
+            <label>직업</label>
+            <select name="job" id="job">
+                <option value="">선택</option>
+                <option value="t">선생님</option>
+                <option value="d">의사</option>
+                <option value="g">기획자</option>
+                <option value="b">개발자</option>
+            </select>
+        </fieldset>
+        <textarea name="na1" id="" cols="30" rows="10"></textarea>
+        <button>전송</button>
+    </form>
+</body>
+</html>
