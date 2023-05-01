@@ -21,6 +21,7 @@
     <script>
         let min=0, sec=0, mSec=0;
         let isStarted = false;
+        // 시작 버튼을 눌렀을때 실행되는 코드
         document.querySelector("#startBtn").addEventListener("click", (e)=>{
             // 이벤트가 일어난 요소의 innerText 를 바꾸기
             // 만일 시작된 상태 라면 "중단" 으로 바꾸고
@@ -43,31 +44,40 @@
                 sec++
                 mSec=0;
             } 
+            // sec가 60이 될때 min 값을 1증가시키고 sec를 0으로 초기화
             if(sec==60) {
                 min++
                 sec=0;
             }
+            // mSec, sec, min 값을 innerText으로 출력
             document.querySelector("#mSec").innerText = mSec;
             document.querySelector("#sec").innerText = sec;
             document.querySelector("#min").innerText = min;
         }, 10)
+        // 재설정 버튼을 눌렀을때 실행되는 코드
         document.querySelector("#resetBtn").addEventListener("click", ()=>{
+            // min, sec, mSec 값을 0으로 초기화
             min = 0;
             sec = 0;
             mSec = 0;
+            // mSec, sec, min 값을 innerText으로 출력
             document.querySelector("#mSec").innerText = mSec;
             document.querySelector("#sec").innerText = sec;
             document.querySelector("#min").innerText = min;
+            // isStarted 상태를 false 으로 변경
             isStarted = false
+            // startBtn의 innerText를 "시작"으로 변경
             document.querySelector("#startBtn").innerText = "시작"
         });
+        // 기록 버튼을 눌렀을때 실행되는 코드
         document.querySelector("#report").addEventListener("click", ()=>{
+            // li 요소 생성
             let li1 = document.createElement("li");
+            // li 요소의 innerText
             li1.innerText = min+":"+sec+":"+mSec
+            // 위에서 만든 li 요소를 id 가 msglist 인 곳에 추가한다.(append)
             document.querySelector("#msgList").append(li1);
         })
-
-
     </script>
 </body>
 </html>
