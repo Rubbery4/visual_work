@@ -19,7 +19,9 @@
             // id 가 result 인 p 요소의 innerText 로 "Pass" 를 출력하고
             // 만족하지 않으면 "Fail" 을 출력해 보세요
             // const reg2 = /^[\w]+$/;
-            const reg = /^[a-zA-Z0-9]+$/;
+            // const reg = /^[a-zA-Z0-9]+$/;
+            // 문자열안에서 역슬레시를 사용할경우엔 역슬레시를 하나더 작성해야 한다.
+            const reg = new RegExp("^[\\w]+$"); 
             let isTrue = reg.test(inputOne)
             
             if(isTrue) {
