@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>테스트</h1>
+    <form action="" method="post">		
+        <input type="text" id="num" name="num" value="0"/>		
+        <div>
+            <input type="text" id="enhance" name="enhance" value="0"/>
+        </div>
+        <div>
+            <input type="text" id="rating" name="rating" value="0"/>
+        </div>
+        <button id="star" type="submit">저장</button>
+    </form>	
+    <script>
+        let falseCount = 0;
+      	let starforce = function() {
+      		const a = Math.random() * 99 +1
+      		const b = 0
+      		if(b==0) {
+                if(falseCount==2) {
+      				document.querySelector("#rating").value=+1
+	      			document.querySelector("#enhance").value=+1
+	      			falseCount=0;
+      			}
+	      		if(a>5) {
+	      			document.querySelector("#rating").value=+1
+	      			document.querySelector("#enhance").value=+1
+	      			console.log("성공")
+	      		} else {
+	      			document.querySelector("#enhance").value=+1
+	      			falseCount=falseCount+1;
+	      		}
+      		}
+        }
+    </script>
+
+</body>
+</html>
